@@ -1,0 +1,66 @@
+﻿@model Bank.BAL.UserModel
+
+
+
+
+
+<div>
+    
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UMobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UMobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UAddress)
+        </dd>
+
+      
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+    @Html.ActionLink("Back to List", "ShowAllUserData")
+</p>

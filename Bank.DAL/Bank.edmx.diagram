@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6ec7abea94ab41469d673c0723eeca78" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="BankSystemModel.Branch" Width="1.5" PointX="7.25" PointY="4.125" />
+        <EntityTypeShape EntityType="BankSystemModel.CashTransactions" Width="1.5" PointX="9.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankSystemModel.User" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="BankSystemModel.Account" Width="1.5" PointX="3" PointY="2.625" />
+        <AssociationConnector Association="BankSystemModel.FK_Account_Branch" />
+        <AssociationConnector Association="BankSystemModel.FK_Account_User" />
+        <EntityTypeShape EntityType="BankSystemModel.Transaction" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="BankSystemModel.FK_Transaction_Account" />
+        <AssociationConnector Association="BankSystemModel.FK_CashTransactions_Transaction" />
+        <AssociationConnector Association="BankSystemModel.FK_Transaction_User" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

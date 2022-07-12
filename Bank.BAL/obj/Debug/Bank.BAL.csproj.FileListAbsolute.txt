@@ -1,0 +1,15 @@
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.BAL.dll.config
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.BAL.dll
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.BAL.pdb
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.DAL.dll
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\EntityFramework.dll
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.DAL.pdb
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\Bank.DAL.dll.config
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\EntityFramework.xml
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\obj\Debug\Bank.BAL.csprojAssemblyReference.cache
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\obj\Debug\Bank.BAL.csproj.CoreCompileInputs.cache
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\obj\Debug\Bank.BAL.csproj.CopyComplete
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\obj\Debug\Bank.BAL.dll
+C:\Bishnu\LearningProject\BankSystem\Bank.BAL\obj\Debug\Bank.BAL.pdb

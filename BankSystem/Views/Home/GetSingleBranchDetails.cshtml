@@ -1,0 +1,28 @@
+﻿@model Bank.BAL.BranchModel
+
+@if (Request.IsAuthenticated)
+{
+    <div>
+       
+        <dl class="dl-horizontal">
+           
+            <dt>
+                @Html.DisplayNameFor(model => model.BranchName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BranchName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BranchNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BranchNumber)
+            </dd>
+
+        </dl>
+    </div>
+   
+}

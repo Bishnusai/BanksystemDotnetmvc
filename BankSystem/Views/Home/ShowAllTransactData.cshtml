@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Bank.BAL.TransactionModel>
+
+@if (Request.IsAuthenticated)
+{
+    <button type="button" class="btn navbar-btn">@Html.ActionLink("Home", "Index", "Home")</button>
+
+    <button type="button" class="btn navbar-btn">@Html.ActionLink("Cash Transaction", "TransactionSystem", "Home")</button>
+    <table class="table table-bordered text-center table-hover">
+        <tr class="text-center">
+           
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.TransactionAmount)
+            </th>
+
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.transactionType)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.TransactionDate)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.Account.AccountNumber)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.Account.AccountBalance)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionAmount)
+                </td>
+
+                <td>
+                    @if (item.transactionType == "D")
+                    {
+                        <font color="green">@item.transactionType</font>
+                    }
+                    else
+                    {
+                        <font color="red">@item.transactionType</font>
+                    }
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Account.AccountNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Account.AccountBalance)
+                </td>
+            </tr>
+
+        }
+
+
+    </table>
+}
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .sucess {
+            color: green;
+        }
+    </style>

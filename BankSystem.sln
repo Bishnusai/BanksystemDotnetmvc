@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1758
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystem", "BankSystem\BankSystem.csproj", "{5B934F63-4DBF-4D6B-9BDD-D238B2DADDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.DAL", "Bank.DAL\Bank.DAL.csproj", "{71526F58-237F-4BF3-9B42-5A3BD99E949A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.BAL", "Bank.BAL\Bank.BAL.csproj", "{ACD14526-589C-4DCC-9324-771F0C2C3C94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B934F63-4DBF-4D6B-9BDD-D238B2DADDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B934F63-4DBF-4D6B-9BDD-D238B2DADDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B934F63-4DBF-4D6B-9BDD-D238B2DADDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B934F63-4DBF-4D6B-9BDD-D238B2DADDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71526F58-237F-4BF3-9B42-5A3BD99E949A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71526F58-237F-4BF3-9B42-5A3BD99E949A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71526F58-237F-4BF3-9B42-5A3BD99E949A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71526F58-237F-4BF3-9B42-5A3BD99E949A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD14526-589C-4DCC-9324-771F0C2C3C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD14526-589C-4DCC-9324-771F0C2C3C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD14526-589C-4DCC-9324-771F0C2C3C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD14526-589C-4DCC-9324-771F0C2C3C94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1429CCD9-A2D6-4454-8C9E-20433E074C86}
+	EndGlobalSection
+EndGlobal

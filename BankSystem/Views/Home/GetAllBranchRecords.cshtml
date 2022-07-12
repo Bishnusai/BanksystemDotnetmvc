@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Bank.BAL.BranchModel>
+
+@if (Request.IsAuthenticated)
+{
+    <br />
+    /**/
+    <button type="button" class="btn ">@Html.ActionLink("Back", "Index", "Home")</button>
+    <button class="btn" type="button">
+        @Html.ActionLink("Add Branch", "RegisterBranch")
+    </button>
+    <br /> <br />
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchNumber)
+            </th>
+            <th>
+                Actions
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BranchId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BranchName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BranchNumber)
+                </td>
+                <td>
+                    <button type="button" class="btn navbar-btn">
+                        @Html.ActionLink("Edit", "Editbranch", new { @id = item.BranchId }, new { /* id=item.PrimaryKey */ })
+                    </button>
+                    <button type="button" class="btn navbar-btn">
+                        @Html.ActionLink("Details", "GetSingleBranchDetails", new { @id = item.BranchId }, new { /* id=item.PrimaryKey */ })
+                    </button>
+                    <button type="button" class="btn navbar-btn">
+                        @Html.ActionLink("Delete", "DeleteBranch", new { @id = item.BranchId }, new { /* id=item.PrimaryKey */ })
+                    </button>
+                </td>
+            </tr>
+        }
+
+    </table>
+}

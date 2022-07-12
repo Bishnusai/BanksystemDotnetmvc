@@ -1,0 +1,86 @@
+﻿
+@model Bank.BAL.TransactionModel
+
+
+
+@if (Request.IsAuthenticated)
+
+{
+
+    <button type="button" class="btn navbar-btn danger">@Html.ActionLink("Home", "Index", "Home")</button>
+    using (Html.BeginForm("TransactionSystem", "Home", FormMethod.Post))
+    {
+        <br />
+        <div class="dropdown">
+            <span><b>Select Account::&nbsp;&nbsp;&nbsp;</b></span>@Html.DropDownListFor(model => model.AccountId, new SelectList(Model.AccountList, "AccountId", "AccountNumber"), "Select Account")
+        </div>
+        <br /><br />
+
+        {
+
+
+            @Html.RadioButtonFor(model => model.transactionType, "D") <b>Deposit &nbsp;</b>
+            @Html.RadioButtonFor(model => model.transactionType, "W") <b>WithDrawl </b>
+            <br />
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.TransactionAmount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TransactionAmount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TransactionAmount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CashTransaction.C100, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CashTransaction.C100, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CashTransaction.C100, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CashTransaction.C200, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CashTransaction.C200, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CashTransaction.C200, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CashTransaction.C500, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CashTransaction.C500, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CashTransaction.C500, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CashTransaction.C2000, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CashTransaction.C2000, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CashTransaction.C2000, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            @*<div class="form-group">
+                   @Model.TransactionDate.Date();
+                </div>*@
+        }
+
+        <input type="submit" value="Proceed" style="color: white; background-color: deepskyblue; " id="submit" />
+        <span style="color:red;">@ViewBag.message</span>
+        @*<span style="color:red;">@ViewBag.minBalamceErr </span>*@
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.AccountBalance, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AccountBalance, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AccountBalance, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+
+    }
+        <span>   @Html.ActionLink("Transaction Details", "ShowAllTransactData", "Home")</span>
+  
+}

@@ -1,0 +1,66 @@
+﻿@model Bank.BAL.BranchModel
+
+@if (Request.IsAuthenticated)
+{
+    <style>
+        .container2 {
+            background: linear-gradient(to bottom,#b0c8e0 0%,#fff 25%);
+            border-radius: 10px;
+        }
+    </style>
+    <br />
+    <div>
+        <button type="button" class="btn">
+            <i class="fa fa-home" aria-hidden="true">
+                @Html.ActionLink("Home", "Index", null, new { style = "text-decoration:none;" })
+            </i>
+        </button>
+    </div>
+    <br />
+    <div class="container bg-info img-rounded">
+        <div class="card text-center">
+            <h2 class="card-title">Add Technology</h2>
+        </div>
+    </div>
+    <div class="container container2 ">
+        <br />
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                <button type="button" class="btn navbar-btn "> @Html.ActionLink("Home", "Index")</button>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <button type="button" class="btn navbar-btn">@Html.ActionLink("Branch Details", "GetAllBranchRecords", "Home")</button>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BranchName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.BranchName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BranchName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BranchNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.BranchNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BranchNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Add Branch" class="btn btn-default" />
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

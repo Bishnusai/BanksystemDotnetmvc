@@ -1,0 +1,13 @@
+﻿@model Bank.BAL.AccountModel
+@if (Request.IsAuthenticated)
+{
+    <button type="button" class="btn navbar-btn btn-success "><span> Welcome </span>@User.Identity.Name</button><br /><br />
+    <button type="button" class="btn navbar-btn">@Html.ActionLink("Add Branch", "RegisterBranch", "Home")</button>
+   
+    @*<button type="button" class="btn navbar-btn">@Html.ActionLink("Add Account", "LoginIndex", "Home")</button>*@
+    <button type="button" class="btn navbar-btn">@Html.ActionLink("Get Account Details", "GetDetailsOfAccount", "Home")</button>
+
+    <button type="button" class="btn navbar-btn">@Html.ActionLink("Transactions", "TransactionSystem", "Home")</button>
+    @*<button type="button" class="btn navbar-btn">@Html.ActionLink("Get UserData", "ShowAllUserData", "Home")</button>*@
+    @*<button type="button" class="btn navbar-btn ">@Html.ActionLink("Sign Up", "Create", "Home")</button>*@
+}
